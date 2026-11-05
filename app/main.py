@@ -40,11 +40,16 @@ def home(request: Request):
 @app.get("/api/health")
 def health(): return {"status":"ok","indexed_chunks":len(engine.docs)}
 @app.post("/api/ask")
-def ask(body:Question):
-    q=body.question.strip()
-    if not q: raise HTTPException(400,"Enter a question.")
-    result=engine.ask(q);save(cfg.database_path,q,result["answer"])
+def ask(payload: Question):
+    q = payload.question.strip()
+
+    if not q:
+        raise HTTPException(status_code=400, detail="Question cannot be empty.")
+
+    result = engine.ask(q)
+    save(cfg.database_path, q, result["answer"])
     return result
+
 @app.get("/api/history")
 def get_history(): return {"items":history(cfg.database_path)}
 @app.get("/api/documents")
