@@ -1,4 +1,4 @@
-# RestaurantOps AI
+# RestaurantOps AI- RAG based
 
 A local-first RAG assistant for a fictional Continental + Italian bistro, The Oak & Thyme Bistro.
 
