@@ -21,7 +21,7 @@ class Config(BaseSettings):
     upload_dir:str="data/uploads"
     model_config=SettingsConfigDict(env_file=".env",extra="ignore")
 cfg=Config()
-app=FastAPI(title="RestaurantOps AI")
+app=FastAPI(title="RestoGuide AI")
 app.mount("/static",StaticFiles(directory="app/static"),name="static")
 templates=Jinja2Templates(directory="app/templates")
 Path(cfg.upload_dir).mkdir(parents=True,exist_ok=True)
