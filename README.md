@@ -1,4 +1,4 @@
-# RestaurantOps AI- RAG based
+#RestoGuide AI- RAG based
 
 A local-first RAG assistant for a fictional Continental + Italian bistro, The Oak & Thyme Bistro.
 
@@ -44,6 +44,6 @@ Upload documents through the Documents page. Supported formats: PDF, DOCX, TXT a
 Performance claims should only be made after creating a labelled benchmark and measuring retrieval quality, citation accuracy, abstention accuracy and latency.
 ## Query Routing
 
-RestaurantOps AI first searches the internal restaurant documents.
+RestoGuide AI first searches the internal restaurant documents.
 
 If sufficiently relevant internal evidence is not found, the system can use external web search as a fallback. External results are clearly labelled as unapproved web information and do not override internal restaurant procedures.
